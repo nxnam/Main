@@ -24,7 +24,7 @@ public protocol MainBuildable: Buildable {
     func build(withListener listener: MainListener) -> MainRouting
 }
 
-final class MainBuilder: Builder<MainDependency>, MainBuildable {
+open class MainBuilder: Builder<MainDependency>, MainBuildable {
 
     public override init(dependency: MainDependency) {
         super.init(dependency: dependency)
